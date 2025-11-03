@@ -86,14 +86,16 @@ public class Añadir_usuario extends JDialog {
 
         if (textField1.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Por favor ingrese el correo del usuario");
+        } else {
+            var fila =  new Object[]{ usuario.getCorreo(), usuario.getPais(),usuario.getPlataforma() };
+            modeloañadir.addRow(fila);
+            log.info("Usuario creado con exito: " + fila);
+
         }
 
-        var fila =  new Object[]{ usuario.getCorreo(), usuario.getPais(),usuario.getPlataforma() };
-        modeloañadir.addRow(fila);
 
         dispose();
 
-        log.info("Usuario creado con exito: " + fila);
     }
     /**
      * Aqui salimos del programa
