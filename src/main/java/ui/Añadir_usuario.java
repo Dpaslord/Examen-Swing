@@ -90,11 +90,11 @@ public class Añadir_usuario extends JDialog {
             var fila =  new Object[]{ usuario.getCorreo(), usuario.getPais(),usuario.getPlataforma() };
             modeloañadir.addRow(fila);
             log.info("Usuario creado con exito: " + fila);
-
+            dispose();
         }
 
 
-        dispose();
+
 
     }
     /**
